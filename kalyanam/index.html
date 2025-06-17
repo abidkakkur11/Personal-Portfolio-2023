@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid & Nihala - Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audio Section -->
+    <audio id="weddingAudio" src="/kalyanam.mp3" autoplay></audio>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('weddingAudio');
+            audio.play().catch(function(){});
+        });
+    </script>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Bismillah Section -->
+        <section class="bismillah-section">
+            <h1 class="bismillah">In the name of Allah</h1>
+        </section>
+
+        <!-- Names Section -->
+        <section class="names-section">
+            <div class="names-container">
+                <h2 class="bride-name">Abid</h2>
+                <div class="ampersand">&</div>
+                <h2 class="groom-name">Nihala</h2>
+            </div>
+        </section>
+
+        <!-- Date & Location Section -->
+        <section class="details-section">
+            <div class="detail-item">
+                <h3>Date</h3>
+                <p>July 19, 2025</p>
+            </div>
+            <div class="detail-item">
+                <h3>Reception Time</h3>
+                <p>From 4:00 PM</p>
+            </div>            
+            <div class="detail-item">
+                <h3>Location</h3>
+                <p>11 th Mile<br>Kakkur, Kozhikode</p>
+                <a 
+                    href="https://maps.app.goo.gl/4KcF71VzXt8r8RxZ6?g_st=atm" 
+                    target="_blank" 
+                    class="get-directions-link">
+                    🚗 Get Directions
+                </a>
+            </div>
+            <div class="detail-item">
+                <h3>Nikah On</h3>
+                <p>July 20, 2025, 10:00 AM</p>
+            </div>
+        </section>
+
+        <!-- Combined Images Section -->
+        <section class="images-section">
+            <div class="combined-images">
+                <div class="image-container groom-image">
+                    <img src="/abid.jpg" alt="Groom">
+                </div>
+                <div class="heart-divider">
+                    <div class="heart">♥</div>
+                </div>
+                <div class="image-container bride-image">
+                    <img src="/nihala.jpg" alt="Bride">
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section">
+            <h3>Enter the code to confirm your invitation</h3>
+            <form class="rsvp-form" id="rsvpForm">
+                <input type="text" id="secretCode" placeholder="Enter given code" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <div class="success-icon">✓</div>
+                <h3>Your invitation confirmed!</h3>
+                <p>Thank you for confirming your attendance. We look forward to celebrating with you!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
