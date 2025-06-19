@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Audio Section -->
-    <audio id="weddingAudio" src="/kalyanam/kalyanam.mp3" autoplay></audio>
+    <audio id="weddingAudio" src="/kalyanam/kalyanam.mp3" preload="auto"></audio>
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             var audio = document.getElementById('weddingAudio');
@@ -81,7 +81,7 @@
         <section class="rsvp-section">
             <h3>Enter the code to confirm your invitation</h3>
             <form class="rsvp-form" id="rsvpForm">
-                <input type="text" id="secretCode" placeholder="Enter the code" required>
+                <input type="text" id="secretCode" placeholder="Please enter the code" required>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -95,6 +95,14 @@
                 <div class="success-icon">✓</div>
                 <h3>Your invitation confirmed!</h3>
                 <p>Thank you for confirming your attendance. We look forward to celebrating with you!</p>
+                <div class="audio-animation">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="audio-playing-text">Music is playing...</div>
             </div>
         </div>
     </div>

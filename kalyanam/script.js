@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function showModal() {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+        // Play audio after confirmation
+        var audio = document.getElementById('weddingAudio');
+        audio.currentTime = 0;
+        audio.play().catch(function(){});
     }
     
     // Function to hide modal
