@@ -6,26 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('confirmationModal');
     const closeModal = document.getElementById('closeModal');
     
-    // Secret code for invitation confirmation
-    const SECRET_CODE = 'ABIDWEDDING';
-    
-    // Handle form submission
-    rsvpForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const enteredCode = secretCodeInput.value.trim().toUpperCase();
-        
-        if (enteredCode === SECRET_CODE) {
-            // Show success modal
-            showModal();
-            // Clear the input
-            secretCodeInput.value = '';
-        } else {
-            // Show error (you can customize this)
-            showError();
-        }
-    });
-    
+
     // Function to show modal
     function showModal() {
         modal.style.display = 'block';
@@ -236,6 +217,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', animateDetails);
     animateDetails();
+
+    document.getElementById('confirmPresenceBtn').addEventListener('click', function() {
+        document.getElementById('confirmationModal').style.display = 'block';
+
+        // Play audio after confirmation
+        var audio = document.getElementById('weddingAudio');
+        audio.currentTime = 0;
+        audio.play().catch(function(){});
+
+        // Optionally, pause audio when modal is closed
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('confirmationModal').style.display = 'none';
+            audio.pause();
+        };
+    });
 });
 
 // Add shake animation to CSS dynamically

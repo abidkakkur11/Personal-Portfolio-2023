@@ -13,12 +13,6 @@
 <body>
     <!-- Audio Section -->
     <audio id="weddingAudio" src="/kalyanam/kalyanam.mp3" preload="auto"></audio>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var audio = document.getElementById('weddingAudio');
-            audio.play().catch(function(){});
-        });
-    </script>
 
     <!-- Main Content -->
     <div class="container">
@@ -60,11 +54,7 @@
                     🚗 Get Directions
                 </a>
             </div>
-            <div class="detail-item">
-                <h3>Nikah On</h3>
-                <p>July 20, 2025, 10:00 AM (at Bride's Residence)</p>
-            </div>
-            <div style="text-align:center; margin-top:24px;">
+            <div style="text-align:center; margin-top:24px;margin-bottom:24px;">
                 <a 
                     href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abid+%26+Nihala+Wedding+Reception&dates=20250719T160000/20250719T200000&details=Wedding+Reception+of+Abid+and+Nihala+at+11th+Mile,+Kakkur,+Kozhikode&location=11th+Mile,+Kakkur,+Kozhikode&sf=true&output=xml"
                     target="_blank"
@@ -74,6 +64,11 @@
                     Add to Google Calendar
                 </a>
             </div>
+            <div class="detail-item">
+                <h3>Nikah On</h3>
+                <p>July 20, 2025, 10:00 AM (at Bride's Residence)</p>
+            </div>
+ 
         </section>
 
         <!-- Combined Images Section -->
@@ -93,11 +88,8 @@
 
         <!-- RSVP Section -->
         <section class="rsvp-section">
-            <h3>Enter the code to confirm your invitation</h3>
-            <form class="rsvp-form" id="rsvpForm">
-                <input type="text" id="secretCode" placeholder="Please enter the code" required>
-                <button type="submit">Submit</button>
-            </form>
+            <h3>Confirm your presence at the wedding</h3>
+            <button id="confirmPresenceBtn" class="confirm-btn">Confirm your Presence</button>
         </section>
     </div>
 
