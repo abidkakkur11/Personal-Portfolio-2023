@@ -678,3 +678,48 @@ body::before {
 .confirm-btn:active {
   transform: scale(0.98);
 }
+
+.getting-married-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 10px 0;
+  min-height: 60px;
+}
+
+.getting-married-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #ffb347;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffb347 30%, #ffcc80 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 2px 12px rgba(255, 179, 71, 0.18);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95) rotate(-2deg);
+  animation: fadeInUpGlow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInUpGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95) rotate(-2deg);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.04) rotate(1deg);
+    text-shadow: 0 4px 24px #ffb34755;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    text-shadow: 0 2px 12px #ffb34755;
+  }
+}
