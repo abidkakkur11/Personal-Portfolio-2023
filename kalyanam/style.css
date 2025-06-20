@@ -510,6 +510,15 @@ body::before {
     }
 }
 
+@media (max-width: 600px) {
+  .getting-married-section,
+  .getting-married-text {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* New Styles for Get Directions Link */
 .get-directions-link {
     display: inline-block;
